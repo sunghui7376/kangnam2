@@ -1,0 +1,267 @@
+* {
+    margin: 0; padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+
+
+nav{
+    position: relative;
+    top: 0; left: 0;
+    z-index: 99;
+    width: 100%; height: 50px;
+    border: 0px solid #f2f2f2;
+    background: #dddcdc;
+    display: flex;
+    justify-content: center;
+    background: #000b15; 
+}
+
+nav> .logo> p> a {
+    display: block;
+    width: 100%; height: 100%;
+    color: white;
+    border: 1px solid red;
+}
+
+/* 주메뉴 박스들 */
+nav> div {
+    position: relative;
+    top: 0; left: 0;
+
+    width: 10%; height: 100%;
+    border: 0px solid #ccc;
+    text-align: center;
+    line-height: 50px;
+
+}
+
+/* 첫 주메뉴 로고-타이틀  */
+nav> div:nth-child(1) {
+    margin-right: 5%;
+}
+
+/* 마지막 주메뉴 삼선바 */
+nav> div:last-child {
+    margin-left: 5%;
+}
+
+
+
+/* 주메뉴에 보여지는 글자(주메뉴) */
+nav> div> p {
+    width: 100%; height: 100%;
+    color: white;
+}
+
+
+nav> div:hover> .menu {
+    display: block;
+}
+
+/* 주메뉴 속에 들어있는 서브 메뉴 박스(ul) */
+nav> div> .menu {
+    position: absolute; top: 100%;
+
+    width: 1050%; height: 200px;
+    border: 1px solid black;
+    display: none;
+    background: #000b15; 
+}
+
+/* 주메뉴 속에 들어있는 서브 메뉴 박스(ul) 중에 첫번째 박스(실제 서브메뉴들-li) */
+nav> div> .menu .sub1 {
+    float: left; 
+    height: 100%;
+}
+
+/* 주메뉴 속에 들어있는 서브 메뉴 박스(ul) 중에 두번째 박스(해당 배경그림-li) */
+nav> div> .menu .sub2 {
+    float: right; 
+    height: 100%;
+}
+
+/* 주메뉴 속에 들어있는 첫 서브메뉴 박스(ul) */
+nav> div> .menu0 {
+    left: -100%;
+    display: block;
+}
+
+/* 주메뉴 속에 들어있는 둘째 서브메뉴 박스(ul) */
+nav> div> .menu1 {
+    left: -355%;
+}
+
+/* 주메뉴 속에 들어있는 셋째 서브메뉴 박스(ul) */
+nav> div> .menu2 {
+    left: -455%;
+}
+
+/* 주메뉴 속에 들어있는 넷째 서브메뉴 박스(ul) */
+nav> div> .menu3 {
+    left: -555%;
+}
+
+/* 주메뉴 속에 들어있는 다섯째 서브메뉴 박스(ul) */
+nav> div> .menu4 {
+    left: -655%;
+}
+
+nav> div> .menu5 {
+    left: -755%;
+}
+
+/* 서브메뉴 박스(ul) 속에 있는 요소(항목=Element) */
+nav> div> .menu> li { /* .sub1 .sub2*/
+    outline: 0px solid red;
+    width: 50%;
+}
+
+/* 서브메뉴 박스(ul) 속에 있는 요소(항목=Element) */
+nav> div> .menu> li div  /*실제 서브 메뉴들*/{
+    outline: 0px solid blue;
+    width: 70%;
+    margin: 10px auto;
+    color: white;
+    opacity: 0.7;
+}
+
+nav> div> .menu> li> div> a { /*실제 서브 메뉴들*/
+    display: block; width: 100%; height: 100%;
+    border: 0px solid white;
+    color: white;
+}
+
+
+nav> div> .menu> li div:hover {
+    opacity: 1;
+}
+
+nav> div> .menu> li> img {
+    height: 100%;
+}
+
+/* 삼선바 메뉴 */
+nav> .bar {
+    position: relative;
+    top: 0; left: 0;
+    z-index: 99;
+    display: none;
+}
+
+
+/* 모바일에서 전체 메뉴 박스 */
+nav> .bar> .subBox {
+    position: absolute;
+    top: 45px; left: 110%;
+
+    width: 100%; height: 2000px;
+    background: black;
+    border: 0px solid white;
+
+    transition: all o.5s;
+}
+
+/* 모바일에서 주메뉴 박스 */
+nav> .bar> .subBox> .subM {
+    width: 100%; 
+    border: 0px dashed #555;
+    color: white;
+    margin-bottom: 1px;
+}
+
+nav> .bar> .subBox> .subM> p {
+    width: 100%; height: 50px;
+    border: 0px solid red;
+}
+
+/* 모바일에서 첫 주메뉴 박스 */
+nav> .bar> .subBox> .subM0 {
+    margin-top: 50px;
+}
+
+/* 모바일 서브메뉴 박스들 */
+nav> .bar> .subBox> .subM> .Mmenu {
+    width: 100%;
+    height: 0;
+    border: 0px solid white;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+/* 모바일 주메뉴(div-.subM)에 오버하면 자식(p) 배경색 변경*/
+nav> .bar> .subBox> .subM:hover> p {
+    background: blue;
+}
+
+/* 모바일 메뉴(div-.subM)에 오버하면 서브메뉴 박스(.Mmenu) 높이가 120px이 된다.*/
+nav> .bar> .subBox> .subM:hover> .Mmenu {
+    height: 150px; 
+}
+
+nav> .bar> .subBox> .subM:hover> .Mmenu4,
+nav> .bar> .subBox> .subM:hover> .Mmenu5 {
+    height: 100px; 
+}
+
+/* 모바일 서브메뉴 박스 속에 실제 모바일 메뉴들 오버하면 배경색 변경 */
+nav> .bar> .subBox> .subM> .Mmenu> li:hover  {
+    background: skyblue; color: black;
+}
+
+/* 모바일 서브메뉴 박스 속에 실제 모바일 메뉴들 */
+nav> .bar> .subBox> .subM> .Mmenu> li {
+    width: 100%; height: 40px;
+    line-height: 40px;
+}
+
+/* 모바일 서브메뉴 박스 속에 실제 모바일 메뉴들 연결하는 a태그*/
+nav> .bar> .subBox> .subM> .Mmenu> li> a {
+    display: block; color: white;
+    width: 100%; height: 100px;
+    line-height: 40px;
+}
+
+
+
+/* 닫기(p) */
+nav> .bar> .subBox> .close {
+    width: 70px; height: 50px;
+    border: 1px solid white;
+    color: white;
+    margin-top: 30px;
+    margin-left: 65%;
+}
+
+/* 마지막 footer */
+
+footer {
+    width: 100%; height: 200px;
+    background: white;
+    border: 0px solid red;
+    display: flex; flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 25px; */
+}
+
+footer> ul {
+    width: 20%; height: 150px;
+    border: 0px solid black;
+    margin-right: 100px;
+}
+
+footer> ul:last-child {
+    margin-right: 0px;
+}
+
+footer> ul> li {
+    width: 100%; height: 40px;
+    border: 0px solid red;
+}
+
+footer> ul> li:first-child {
+    margin-top: 15px;
+}

@@ -1,0 +1,35 @@
+nav> div {
+    display: none;
+}
+
+nav> .logo, nav> .bar {
+    display: block;
+    border: 0px solid white;
+}
+
+/* 주메뉴 박스들 */
+nav> div {
+   width: 50%;
+
+}
+
+/* 첫 주메뉴 로고-타이틀  */
+nav> div:nth-child(1) {
+    margin-right: 0%;
+}
+
+/* 마지막 footer */
+
+footer> ul {
+    display: none;
+}
+
+footer> ul:first-child {
+    display: block;
+    width: 98%;
+    margin: 0 auto;
+}
+
+footer> ul> li {
+    text-align: centers;
+}

@@ -1,0 +1,28 @@
+
+
+
+
+
+/* 본문 내용 만들기 */
+article {
+    padding: 50px;
+    height: 1600px;
+}
+
+
+
+/* 본문 내용 중 그림 3개 */
+.at .imgBox> li {
+    width: 100%;
+}
+
+
+.at> .imgBox> li> p {
+    
+}
+
+.at> .imgBox> li> p.imgBox_text1 {
+    font-size: 1.1rem;
+    font-family: hy견고딕;
+}
+
